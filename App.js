@@ -11,7 +11,13 @@ export default function App() {
   ]);
   return (
     <View style={styles.container}>
-      
+      {people.map((item)=>{
+        return(
+          <View key={item.key}>
+            <Text>{item.name}</Text>
+          </View>
+        )
+      })}
     </View>
   );
 }
