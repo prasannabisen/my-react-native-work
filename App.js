@@ -8,6 +8,10 @@ export default function App() {
     {name:'himanshu',key:3},
     {name:'navneet',key:4},
     {name:'prashant',key:5},
+    {name:'harsh',key:6},
+    {name:'utkarsh',key:7},
+    {name:'vageta',key:8},
+
   ]);
   return (
     <View style={styles.container}>
@@ -35,6 +39,6 @@ const styles = StyleSheet.create({
     backgroundColor:'pink',
     margin:30,
     marginTop:24,
-    fontSize:34,
+    fontSize:44,
   }
 });
