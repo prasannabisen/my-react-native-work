@@ -1,13 +1,19 @@
 import React,{useState} from 'react';
 import { StyleSheet, View,Text,FlatList} from 'react-native';
 import Header from './component/Header.js';
-
+import Todos from './component/Todos'
 export default function App(){
   const [todos,setTodos]=useState([
     {text:"buy coffee",key:'1'},
     {text:"create app",key:'2'},
     {text:"play with phone",key:'3'}
   ]);
+
+  const pressHandler=(key)=>{
+    setTodos((prevTodos)=>{
+      return prevTodos.filter(todo=>todo.key!=key)
+    })
+  }
 
   return(
     <View style={styles.container}>
@@ -21,7 +27,7 @@ export default function App(){
             <FlatList 
               data={todos}
               renderItem={({item})=>(
-                <Text>{item.text}</Text>
+                <Todos item={item} pressHandler={pressHandler}/>
               )}
             />
           </View>
