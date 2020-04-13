@@ -12,6 +12,9 @@ export default function App() {
 
   const pressHandler=(key)=>{
     console.log(key);
+    setPeople((prevPeople)=>{
+      return prevPeople.filter(person=>person.key !=key);
+    })
   }
 
   return (
